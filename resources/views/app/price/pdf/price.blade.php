@@ -32,7 +32,7 @@
                     {{ env('APP_GOV') }} <br>
                     {{ env('APP_DEP') }}
                 </h5>
-                <h6>{{ $product->description }}</h6>
+                <h6>{{ $product->description ?? '---' }}</h6>
             </div>
 
             <div class="col-12 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8 mt-3">
@@ -50,7 +50,7 @@
                         </tr>
                         <tr>
                             <th scope="col">DIA</th>
-                            <th scope="col" class="text-center">{{ $product->name }}</th>
+                            <th scope="col" class="text-center">{{ $product->name ?? '---' }}</th>
                             <th scope="col" class="text-center">VALOR</th>
                             <th scope="col" class="text-center">TOTAL DO DIA</th>
                         </tr>
@@ -65,7 +65,7 @@
                             </tr>
                         @endforeach
                             <tr>
-                                <td>TOTAL DE {{ $product->name }}</td>
+                                <td>TOTAL DE {{ $product->name ?? '---' }}</td>
                                 <td class="text-center">{{ $price->sum('amount') }}</td>
                                 <td class="text-center">TOTAL DO MÊS</td>
                                 <td class="text-center">R$ {{ number_format($price->sum('value'), 2, ',', '.') }}</td>
