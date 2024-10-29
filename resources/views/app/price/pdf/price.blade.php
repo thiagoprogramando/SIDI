@@ -25,7 +25,7 @@
 
         <div class="row mt-5">
             <div class="col-12 col-sm-12 offset-md-2 col-md-2 offset-lg-2 col-lg-2 text-center">
-                <img src="{{ url('template/img/favicon.png') }}" class="img-fluid w-75" alt="{{ env('APP_GOV') }}">
+                <img src="{{ url('template/img/favicon.png') }}" class="img-fluid" width="100" height="100" alt="{{ env('APP_GOV') }}">
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                 <h5>
